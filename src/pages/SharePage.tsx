@@ -102,7 +102,7 @@ const SharePage: React.FC = () => {
         </p>
       </motion.div>
 
-      {navigator.share && (
+      {typeof navigator !== 'undefined' && navigator.share && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
