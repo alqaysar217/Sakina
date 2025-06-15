@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause, Clock, Heart } from 'lucide-react';
-import { useAudioPlayer } from '../contexts/AudioPlayerContext';
-import AudioPlayer from '../components/AudioPlayer';
+import { useAudioPlayer } from '../contexts/AudioPlayerContext'; // استيراد الـ hook الخاص بالمشغل
 
+// تعريف واجهة (Interface) لبيانات القصة
 interface Story {
   id: string;
   title: string;
@@ -15,6 +15,7 @@ interface Story {
   audio: string;
 }
 
+// بيانات القصص
 const stories: Story[] = [
   {
     id: '1',
@@ -100,7 +101,7 @@ const stories: Story[] = [
     id: '9',
     title: 'قصة سيدنا لوط وشعيب وإسماعيل وإسحاق عليهم السلام',
     narrator: 'الشيخ نبيل العوضي',
-    duration: '348 دقيقة',
+    duration: '348 دقيقة', // هذا الرقم يبدو كبيراً جداً (348 دقيقة = 5.8 ساعات)، يرجى التحقق منه
     color: 'from-amber-500 to-yellow-600',
     description: 'قصص لوط وشعيب وإسماعيل وإسحاق عليهم السلام',
     image: '/images/LotShuaybIshmaelIsaac.png',
@@ -119,16 +120,23 @@ const stories: Story[] = [
 ];
 
 const StoriesPage: React.FC = () => {
-  const { playTrack, currentTrack, isPlaying } = useAudioPlayer();
+  // استخدام currentTrack و isPlaying و setPlaylistAndPlay من سياق المشغل
+  const { currentTrack, isPlaying, setPlaylistAndPlay } = useAudioPlayer();
 
+  // دالة لتشغيل قصة
   const playStory = (story: Story) => {
-    playTrack({
-      id: story.id,
-      title: story.title,
-      artist: story.narrator,
-      image: story.image,
-      url: story.audio,
-    });
+    // بناء قائمة تشغيل كاملة للقصص من مصفوفة stories
+    const fullStoriesPlaylist = stories.map(s => ({
+      id: s.id,
+      title: s.title,
+      artist: s.narrator,
+      image: s.image,
+      url: s.audio,
+    }));
+
+    // تعيين قائمة التشغيل الكاملة وتشغيل القصة المحددة منها
+    // هذا سيسمح لأزرار "التالي" و "السابق" في المشغل بالعمل بين القصص
+    setPlaylistAndPlay(fullStoriesPlaylist, story.id);
   };
 
   return (
@@ -146,6 +154,7 @@ const StoriesPage: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stories.map((story, index) => {
+          // التحقق إذا كانت هذه القصة هي القصة الحالية التي يتم تشغيلها
           const isCurrent = currentTrack?.id === story.id;
           return (
             <motion.div
@@ -153,11 +162,13 @@ const StoriesPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
+              // تصميم البطاقة
               className={`bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 card-hover
-                ${isCurrent ? 'ring-4 ring-emerald-500' : ''}`}
-              onClick={() => playStory(story)}
+                ${isCurrent ? 'ring-4 ring-emerald-500' : ''}`} {/* إضافة حلقة حول البطاقة إذا كانت القصة هي الحالية */}
+              onClick={() => playStory(story)} // عند النقر على البطاقة، قم بتشغيل القصة
             >
               <div className="flex items-start space-x-4 space-x-reverse mb-4">
+                {/* صورة القصة/القارئ */}
                 <div className={`rounded-xl bg-gradient-to-br ${story.color} shadow-lg w-16 h-16 flex items-center justify-center overflow-hidden`}>
                   <img
                     src={story.image}
@@ -165,6 +176,7 @@ const StoriesPage: React.FC = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
+                {/* تفاصيل القصة */}
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-slate-800 mb-2 font-arabic">{story.title}</h3>
                   <p className="text-emerald-600 text-sm mb-1 font-arabic">{story.narrator}</p>
@@ -178,15 +190,17 @@ const StoriesPage: React.FC = () => {
               <p className="text-slate-600 text-sm mb-4 font-arabic">{story.description}</p>
 
               <div className="flex items-center justify-between">
+                {/* زر المفضلة (لا يقوم بشيء حالياً) */}
                 <button className="p-2 rounded-full hover:bg-slate-50 transition-colors">
                   <Heart className="w-5 h-5 text-slate-600" />
                 </button>
 
+                {/* زر التشغيل/الإيقاف */}
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={(e) => {
-                    e.stopPropagation();
-                    playStory(story);
+                    e.stopPropagation(); // منع النقر على البطاقة بالكامل عند النقر على الزر لتجنب تشغيل القصة مرتين
+                    playStory(story); // تشغيل القصة
                   }}
                   className="flex items-center space-x-2 space-x-reverse px-6 py-3 bg-gradient-to-br from-emerald-600 to-teal-600 text-white rounded-xl hover:shadow-lg transition-all duration-300"
                 >
@@ -208,8 +222,7 @@ const StoriesPage: React.FC = () => {
         })}
       </div>
 
-      {/* المشغل الموحد */}
-      <AudioPlayer />
+      {/* تم إزالة المشغل من هنا - سيتم عرضه بواسطة Layout.tsx لضمان عدم التكرار */}
     </div>
   );
 };
