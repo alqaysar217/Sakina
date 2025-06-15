@@ -23,7 +23,7 @@ const stories: Story[] = [
     duration: '46 دقيقة',
     color: 'from-emerald-500 to-green-600',
     description: 'قصة أبو البشر آدم عليه السلام وخلقه من طين',
-    image: '/images/Adam.png',
+    image: '/images/adam.png',
     audio: '/mp3/adam.mp3',
   },
   {
@@ -33,7 +33,7 @@ const stories: Story[] = [
     duration: '46 دقيقة',
     color: 'from-blue-500 to-cyan-600',
     description: 'قصة نوح عليه السلام والطوفان العظيم',
-    image: '/images/Noah.png',
+    image: '/images/noah.png',
     audio: '/mp3/noah.mp3',
   },
   {
@@ -43,7 +43,7 @@ const stories: Story[] = [
     duration: '45 دقيقة',
     color: 'from-orange-500 to-red-600',
     description: 'قصة خليل الرحمن إبراهيم عليه السلام',
-    image: '/images/Abraham.png',
+    image: '/images/abraham.png',
     audio: '/mp3/abraham.mp3',
   },
   {
@@ -53,7 +53,7 @@ const stories: Story[] = [
     duration: '47 دقيقة',
     color: 'from-purple-500 to-indigo-600',
     description: 'قصة النبيين هود وصالح عليهما السلام',
-    image: '/images/HudSalih.png',
+    image: '/images/hudSalih.png',
     audio: '/mp3/hudSalih.mp3',
   },
   {
@@ -63,7 +63,7 @@ const stories: Story[] = [
     duration: '47 دقيقة',
     color: 'from-yellow-500 to-orange-600',
     description: 'قصة يوسف الصديق عليه السلام',
-    image: '/images/Joseph.png',
+    image: '/images/joseph.png',
     audio: '/mp3/joseph.mp3',
   },
   {
@@ -73,7 +73,7 @@ const stories: Story[] = [
     duration: '50 دقيقة',
     color: 'from-teal-500 to-emerald-600',
     description: 'قصص أيوب ويونس وموسى عليهم السلام',
-    image: '/images/JobJonahMoses.png',
+    image: '/images/jobJonahMoses.png',
     audio: '/mp3/jobJonahMoses.mp3',
   },
   {
@@ -83,7 +83,7 @@ const stories: Story[] = [
     duration: '48 دقيقة',
     color: 'from-indigo-500 to-purple-600',
     description: 'قصة المسيح عيسى عليه السلام',
-    image: '/images/Jesus.png',
+    image: '/images/jesus.png',
     audio: '/mp3/jesus.mp3',
   },
   {
@@ -93,7 +93,7 @@ const stories: Story[] = [
     duration: '50 دقيقة',
     color: 'from-slate-500 to-gray-600',
     description: 'قصص مجموعة من الأنبياء',
-    image: '/images/JoshuaDavidSolomonZechariahJohn.png',
+    image: '/images/joshuaDavidSolomonZechariahJohn.png',
     audio: '/mp3/joshuaDavidSolomonZechariahJohn.mp3',
   },
   {
@@ -103,7 +103,7 @@ const stories: Story[] = [
     duration: '348 دقيقة',
     color: 'from-amber-500 to-yellow-600',
     description: 'قصص لوط وشعيب وإسماعيل وإسحاق عليهم السلام',
-    image: '/images/LotShuaybIshmaelIsaac.png',
+    image: '/images/lotShuaybIshmaelIsaac.png',
     audio: '/mp3/lotShuaybIshmaelIsaac.mp3',
   },
   {
@@ -113,7 +113,7 @@ const stories: Story[] = [
     duration: '50 دقيقة',
     color: 'from-red-500 to-pink-600',
     description: 'تكملة قصة كليم الله موسى عليه السلام',
-    image: '/images/ContinuationMoses.png',
+    image: '/images/continuationMoses.png',
     audio: '/mp3/continuationMoses.mp3',
   },
 ];
