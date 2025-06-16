@@ -33,7 +33,7 @@ const stories: Story[] = [
     duration: '46 دقيقة',
     color: 'from-blue-500 to-cyan-600',
     description: 'قصة نوح عليه السلام والطوفان العظيم',
-    image: '/images/noah.png',
+    image: 'https://3.bp.blogspot.com/-ddIHSp3NuaQ/WP5jpjaAyeI/AAAAAAAALhw/CXdb0PrPs2oEa1UWzvG7ERKSfKGV6b6DQCLcB/w1200-h630-p-k-no-nu/%25D8%25AF%25D8%25B9%25D8%25A7%25D8%25A1%2B%25D9%258A%25D8%25A7%2B%25D9%2585%25D9%2586%2B%25D8%25AC%25D8%25B9%25D9%2584%25D8%25AA%2B%25D9%2584%25D9%2583%25D9%2584%2B%25D8%25AF%25D8%25A7%25D8%25A1%2B%25D8%25AF%25D9%2588%25D8%25A7%25D8%25A1.jpg',
     audio: '/mp3/noah.mp3',
   },
   {
@@ -43,7 +43,7 @@ const stories: Story[] = [
     duration: '45 دقيقة',
     color: 'from-orange-500 to-red-600',
     description: 'قصة خليل الرحمن إبراهيم عليه السلام',
-    image: '/images/abraham.png',
+    image: '/public/images/abraham.png',
     audio: 'https://docs.google.com/uc?export=download&id=1ufOv2CkK_c1UMzBcFYQAArWJnpzUub2A',
   },
   {
@@ -53,7 +53,7 @@ const stories: Story[] = [
     duration: '47 دقيقة',
     color: 'from-purple-500 to-indigo-600',
     description: 'قصة النبيين هود وصالح عليهما السلام',
-    image: '/images/hudSalih.png',
+    image: 'https://3.bp.blogspot.com/-ddIHSp3NuaQ/WP5jpjaAyeI/AAAAAAAALhw/CXdb0PrPs2oEa1UWzvG7ERKSfKGV6b6DQCLcB/w1200-h630-p-k-no-nu/%25D8%25AF%25D8%25B9%25D8%25A7%25D8%25A1%2B%25D9%258A%25D8%25A7%2B%25D9%2585%25D9%2586%2B%25D8%25AC%25D8%25B9%25D9%2584%25D8%25AA%2B%25D9%2584%25D9%2583%25D9%2584%2B%25D8%25AF%25D8%25A7%25D8%25A1%2B%25D8%25AF%25D9%2588%25D8%25A7%25D8%25A1.jpg',
     audio: 'https://docs.google.com/uc?export=download&id=1e03ZkRLDLM60IDojKcAqeReERT3CeXOt',
   },
   {
@@ -93,7 +93,7 @@ const stories: Story[] = [
     duration: '50 دقيقة',
     color: 'from-slate-500 to-gray-600',
     description: 'قصص مجموعة من الأنبياء',
-    image: '/images/joshuaDavidSolomonZechariahJohn.png',
+    image: 'https://3.bp.blogspot.com/-ddIHSp3NuaQ/WP5jpjaAyeI/AAAAAAAALhw/CXdb0PrPs2oEa1UWzvG7ERKSfKGV6b6DQCLcB/w1200-h630-p-k-no-nu/%25D8%25AF%25D8%25B9%25D8%25A7%25D8%25A1%2B%25D9%258A%25D8%25A7%2B%25D9%2585%25D9%2586%2B%25D8%25AC%25D8%25B9%25D9%2584%25D8%25AA%2B%25D9%2584%25D9%2583%25D9%2584%2B%25D8%25AF%25D8%25A7%25D8%25A1%2B%25D8%25AF%25D9%2588%25D8%25A7%25D8%25A1.jpg',
     audio: '/mp3/joshuaDavidSolomonZechariahJohn.mp3',
   },
   {
