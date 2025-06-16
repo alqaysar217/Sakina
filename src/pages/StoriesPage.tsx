@@ -23,8 +23,8 @@ const stories: Story[] = [
     duration: '46 دقيقة',
     color: 'from-emerald-500 to-green-600',
     description: 'قصة أبو البشر آدم عليه السلام وخلقه من طين',
-    image: '/images/adam.png',
-    audio: '/mp3/adam.mp3',
+    image: 'https://3.bp.blogspot.com/-ddIHSp3NuaQ/WP5jpjaAyeI/AAAAAAAALhw/CXdb0PrPs2oEa1UWzvG7ERKSfKGV6b6DQCLcB/w1200-h630-p-k-no-nu/%25D8%25AF%25D8%25B9%25D8%25A7%25D8%25A1%2B%25D9%258A%25D8%25A7%2B%25D9%2585%25D9%2586%2B%25D8%25AC%25D8%25B9%25D9%2584%25D8%25AA%2B%25D9%2584%25D9%2583%25D9%2584%2B%25D8%25AF%25D8%25A7%25D8%25A1%2B%25D8%25AF%25D9%2588%25D8%25A7%25D8%25A1.jpg',
+    audio: 'https://docs.google.com/uc?export=download&id=1fGxvms1aiDvYPPIKHYJ6KaTgXCOGqzlT',
   },
   {
     id: '2',
@@ -44,7 +44,7 @@ const stories: Story[] = [
     color: 'from-orange-500 to-red-600',
     description: 'قصة خليل الرحمن إبراهيم عليه السلام',
     image: '/images/abraham.png',
-    audio: '/mp3/abraham.mp3',
+    audio: 'https://docs.google.com/uc?export=download&id=1ufOv2CkK_c1UMzBcFYQAArWJnpzUub2A',
   },
   {
     id: '4',
@@ -54,7 +54,7 @@ const stories: Story[] = [
     color: 'from-purple-500 to-indigo-600',
     description: 'قصة النبيين هود وصالح عليهما السلام',
     image: '/images/hudSalih.png',
-    audio: '/mp3/hudSalih.mp3',
+    audio: 'https://docs.google.com/uc?export=download&id=1e03ZkRLDLM60IDojKcAqeReERT3CeXOt',
   },
   {
     id: '5',
