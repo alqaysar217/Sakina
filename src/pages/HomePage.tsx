@@ -62,10 +62,10 @@ const HomePage: React.FC = () => {
         className="text-center py-8"
       >
         <h1 className="text-4xl font-bold gradient-text mb-4 font-arabic">
-          أهلاً وسهلاً بك في سَكينة
+          أهلاً بك في سَكينة
         </h1>
         <p className="text-slate-600 text-lg font-arabic">
-          التطبيق الإسلامي المتكامل للقرآن والقصص والأدعية والأذكار
+          التطبيق الإسلامي المتكامل للقرآن والأدعية والأذكار
         </p>
       </motion.div>
 
